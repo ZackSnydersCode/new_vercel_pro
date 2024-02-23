@@ -38,5 +38,4 @@ def print_results():
         print(participants)
     return render_template('done.html', participants=participants)  # <-- Changed template name and passed correct data variable name
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
