@@ -15,7 +15,7 @@ connect.execute('CREATE TABLE IF NOT EXISTS PARTICIPANTS (name Text,email Text)'
 
 @app.route('/join', methods=['POST'])
 def join_us():
-    if request.method == 'POST':  # <-- Should be lowercase 'post'
+    if request.method == 'post':  # <-- Should be lowercase 'post'
         name = request.form['name']
         email = request.form['email']
 
