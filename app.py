@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import sqlite3
-import os
+
 
 app = Flask(__name__)
 
@@ -19,8 +19,7 @@ def join_us():
         name = request.form['name']
         email = request.form['email']
 
-        file = request.files['file']  # <-- Corrected accessing files
-        file.save(os.path.join(app.config['DIR'],file.filename))
+
 
         with sqlite3.connect('database.db') as users:
             cursor = users.cursor()
